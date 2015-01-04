@@ -1,1 +1,2 @@
 Script to produce output similar to 'ip -4 a'
+Uses the netifaces library from https://pypi.python.org/pypi/netifaces
