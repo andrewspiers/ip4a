@@ -1,13 +1,13 @@
 import socket as s
 
-import getnifs
+import netifaces
 
-nifs = getnifs.get_network_interfaces()
+interfaces = netifaces.interfaces()
 
 l = list()
 
-for i in nifs:
-    l.append(i)
-
-for i in l:
-    print (i)
+for i in interfaces:
+    for j in netifaces.ifaddresses(i):
+        if j == netifaces.AF_INET:
+            print (i,end=' ')
+            print(netifaces.ifaddresses(i)[j])
