@@ -101,5 +101,5 @@ def get_network_interfaces():
         libc.freeifaddrs(ifap)
 
 if __name__ == '__main__':
-    print [str(ni) for ni in get_network_interfaces()]
+    print ([str(ni) for ni in get_network_interfaces()])
 
